@@ -12,7 +12,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7
+      - image: circleci/ruby:2.7.1
     working_directory: ~/webapp
     steps:
       - checkout
@@ -22,7 +22,7 @@ jobs:
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
   test:
     docker: 
-      - image: circleci/ruby:2.7
+      - image: circleci/ruby:2.7.1
       - image: circleci/mysql:5.7
         environment:
           MYSQL_ROOT_PASSWORD: 123
